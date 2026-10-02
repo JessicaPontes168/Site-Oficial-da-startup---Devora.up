@@ -1,25 +1,23 @@
-"use client";
-
 import styles from "./hero.module.css";
-import DarkVeil from "./DarkVeil";
+import OrganicLines from "../OrganicLines";
 
+/**
+ * Fundo claro da marca: off-white com aurora azul claro + verde menta,
+ * malha de pontos (toque tecnológico) e linhas orgânicas discretas.
+ * Substitui o shader escuro (DarkVeil), que permanece no projeto sem uso.
+ */
 export default function HeroBackground() {
   return (
     <div className={styles.background} aria-hidden="true">
-      <div style={{ width: "1920px", height: "1080px", position: "relative" }}>
-        <DarkVeil
-          scanlineIntensity={0}
-          scanlineFrequency={0}
-          speed={0.8}
-          warpAmount={0}
-          noiseIntensity={0}
-          resolutionScale={1.25}
-        />
-      </div>
+      <div className={`${styles.blob} ${styles.blobBlue}`} />
+      <div className={`${styles.blob} ${styles.blobMint}`} />
+      <div className={`${styles.blob} ${styles.blobSoft}`} />
 
-      {/* Gradiente escuro no topo e embaixo para suavizar as bordas */}
+      <div className={styles.dotGrid} />
+      <OrganicLines className={styles.lines} />
+
+      {/* Suaviza as bordas para o off-white da página */}
       <div className={styles.vignette} />
-
       <div className={styles.ambientGlow} />
     </div>
   );

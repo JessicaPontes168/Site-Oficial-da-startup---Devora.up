@@ -1,32 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="site-footer">
       <div className="footer-content">
-        <div className="footer-col">
-          <Link href="/" className="footer-logo" style={{ textDecoration: "none" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "20px" }}>
-              <div style={{ position: "relative", width: "40px", height: "40px", flexShrink: 0 }}>
-                <Image 
-                  src="/images/logo/logo_white_transparent.png" 
-                  alt="Devora Icon" 
-                  fill
-                  style={{ objectFit: "contain" }} 
-                />
-              </div>
-              <span style={{ 
-                fontSize: "20px", 
-                fontWeight: "500", 
-                letterSpacing: "1px", 
-                color: "#e2e8f0" 
-              }}>
-                Devora
-              </span>
-            </div>
+        <div className="footer-col footer-brand">
+          <Link href="/" className="footer-logo" aria-label="Devora - página inicial">
+            <Logo size={40} tone="light" />
           </Link>
-          <p style={{ color: "#9ca3af", maxWidth: "300px", lineHeight: "1.8" }}>
+          <p className="footer-about">
             Transformamos visões ambiciosas em produtos digitais de sucesso, com
             design luxuoso e tecnologia de ponta.
           </p>
@@ -34,7 +17,7 @@ export default function Footer() {
 
         <div className="footer-col">
           <h3>Links Rápidos</h3>
-          <ul style={{ listStyle: "none" }}>
+          <ul>
             <li>
               <Link href="/">Início</Link>
             </li>
@@ -55,7 +38,7 @@ export default function Footer() {
 
         <div className="footer-col">
           <h3>Serviços</h3>
-          <ul style={{ listStyle: "none" }}>
+          <ul>
             <li>Sites Profissionais</li>
             <li>Sistemas Sob Medida</li>
             <li>Lojas Virtuais</li>
@@ -66,15 +49,7 @@ export default function Footer() {
 
         <div className="footer-col">
           <h3>Contato</h3>
-          <ul
-            className="social-links"
-            style={{
-              listStyle: "none",
-              display: "flex",
-              gap: "15px",
-              marginTop: "15px",
-            }}
-          >
+          <ul className="social-links">
             <li>
               <a href="#" aria-label="Instagram">
                 <i className="fa-brands fa-instagram"></i>
@@ -91,23 +66,16 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-          <p style={{ color: "#9ca3af", marginTop: "20px" }}>
-            contato@devora.com.br
-          </p>
+          <p className="footer-email">contato@devora.com.br</p>
         </div>
       </div>
-      <div
-        className="footer-bottom"
-        style={{
-          borderTop: "1px solid rgba(255,255,255,0.1)",
-          paddingTop: "20px",
-          marginTop: "40px",
-        }}
-      >
-        <p style={{ color: "#6b7280", fontSize: "14px" }}>
+
+      <div className="footer-bottom">
+        <p>
           &copy; {new Date().getFullYear()} Devora. Todos os direitos
           reservados.
         </p>
+        <p className="footer-signature">Ideias que viram tecnologia.</p>
       </div>
     </footer>
   );

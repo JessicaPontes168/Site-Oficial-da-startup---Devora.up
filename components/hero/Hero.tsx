@@ -3,7 +3,6 @@
 import { useState } from "react";
 import HeroBackground from "./HeroBackground";
 import HeroContent from "./HeroContent";
-import HeroVisual from "./HeroVisual";
 import styles from "./hero.module.css";
 
 export default function Hero() {
@@ -30,14 +29,13 @@ export default function Hero() {
       }
     >
       <HeroBackground />
-      
+
       {/* Luz ambiente interativa */}
       <div className={styles.mouseLight} />
-      
+
       <div className={styles.inner}>
         <div className={styles.heroGrid}>
           <HeroContent />
-          <HeroVisual />
         </div>
       </div>
     </section>

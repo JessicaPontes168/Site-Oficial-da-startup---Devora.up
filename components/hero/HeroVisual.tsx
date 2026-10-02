@@ -21,13 +21,13 @@ export default function HeroVisual() {
 
   return (
     <div className={styles.visualContainer}>
-      {/* Luz ambiente azul atrás do card */}
+      {/* Luz ambiente (azul claro + menta) atrás do card */}
       <div className={styles.visualGlowOrb} />
 
       {/* Floating Badge Top Right */}
       <div className={styles.floatingBadgeTop}>
         <div className={styles.floatingBadgeIcon}>
-          <Zap className="size-4 text-emerald-400" />
+          <Zap />
         </div>
         <div className={styles.floatingBadgeText}>
           <span className={styles.floatingBadgeTitle}>PageSpeed Score</span>
@@ -38,7 +38,7 @@ export default function HeroVisual() {
       {/* Floating Badge Bottom Left */}
       <div className={styles.floatingBadgeBottom}>
         <div className={styles.floatingBadgeIconBlue}>
-          <ShieldCheck className="size-4 text-blue-400" />
+          <ShieldCheck />
         </div>
         <div className={styles.floatingBadgeText}>
           <span className={styles.floatingBadgeTitle}>Arquitetura</span>
@@ -67,7 +67,7 @@ export default function HeroVisual() {
             devora.digital · live engine
           </div>
           <div className={styles.techCardStatus}>
-            <Sparkles className="size-3.5 text-blue-400" />
+            <Sparkles />
             <span>v2.4</span>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function HeroVisual() {
             onClick={() => setActiveTab("performance")}
             className={`${styles.techTabBtn} ${activeTab === "performance" ? styles.techTabBtnActive : ""}`}
           >
-            <Zap className="size-3.5" />
+            <Zap />
             <span>Performance</span>
           </button>
           <button
@@ -87,7 +87,7 @@ export default function HeroVisual() {
             onClick={() => setActiveTab("tech")}
             className={`${styles.techTabBtn} ${activeTab === "tech" ? styles.techTabBtnActive : ""}`}
           >
-            <Code2 className="size-3.5" />
+            <Code2 />
             <span>Tecnologias</span>
           </button>
           <button
@@ -95,7 +95,7 @@ export default function HeroVisual() {
             onClick={() => setActiveTab("results")}
             className={`${styles.techTabBtn} ${activeTab === "results" ? styles.techTabBtnActive : ""}`}
           >
-            <TrendingUp className="size-3.5" />
+            <TrendingUp />
             <span>Resultados</span>
           </button>
         </div>
@@ -133,14 +133,14 @@ export default function HeroVisual() {
               <div className={styles.metricItem}>
                 <span className={styles.metricLabel}>Melhores Práticas</span>
                 <div className={styles.metricProgressBar}>
-                  <div className={styles.metricFill} style={{ width: "100%", background: "linear-gradient(90deg, #3b82f6, #60a5fa)" }} />
+                  <div className={styles.metricFill} style={{ width: "100%" }} />
                 </div>
                 <span className={styles.metricPercent}>100%</span>
               </div>
               <div className={styles.metricItem}>
                 <span className={styles.metricLabel}>SEO Google</span>
                 <div className={styles.metricProgressBar}>
-                  <div className={styles.metricFill} style={{ width: "98%", background: "linear-gradient(90deg, #60a5fa, #93c5fd)" }} />
+                  <div className={styles.metricFill} style={{ width: "98%" }} />
                 </div>
                 <span className={styles.metricPercent}>98%</span>
               </div>
@@ -204,15 +204,15 @@ export default function HeroVisual() {
 
             <div className={styles.resultsFeatureList}>
               <div className={styles.featureListItem}>
-                <CheckCircle2 className="size-4 text-blue-400 shrink-0" />
+                <CheckCircle2 />
                 <span>Design exclusivo desenhado para a sua marca</span>
               </div>
               <div className={styles.featureListItem}>
-                <CheckCircle2 className="size-4 text-blue-400 shrink-0" />
+                <CheckCircle2 />
                 <span>Otimizado para converter visitantes em clientes</span>
               </div>
               <div className={styles.featureListItem}>
-                <CheckCircle2 className="size-4 text-blue-400 shrink-0" />
+                <CheckCircle2 />
                 <span>Suporte dedicado e código 100% autoral</span>
               </div>
             </div>

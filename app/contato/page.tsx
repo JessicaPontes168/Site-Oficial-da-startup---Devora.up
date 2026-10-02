@@ -1,5 +1,7 @@
 "use client";
 
+import PageHero from "@/components/PageHero";
+
 export default function Contato() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -8,13 +10,14 @@ export default function Contato() {
 
   return (
     <>
-      {/* HERO SMALL */}
-      <section className="hero" style={{ minHeight: "50vh", paddingTop: "180px", paddingBottom: "60px" }}>
-        <div className="hero-content" style={{ maxWidth: "800px", textAlign: "center", margin: "0 auto" }}>
-          <h1>Fale <span>Conosco</span></h1>
-          <p>Estamos prontos para impulsionar o seu negócio. Entre em contato!</p>
-        </div>
-      </section>
+      <PageHero
+        title={
+          <>
+            Fale <span>Conosco</span>
+          </>
+        }
+        description="Estamos prontos para impulsionar o seu negócio. Entre em contato!"
+      />
 
       <div className="white-content">
         {/* CONTATO FORM */}
@@ -43,7 +46,7 @@ export default function Contato() {
                 <textarea id="mensagem" name="mensagem" placeholder="Descreva um pouco sobre o seu projeto..." required></textarea>
               </div>
               <button type="submit" className="btn-submit">
-                Enviar Mensagem <i className="fa-solid fa-paper-plane" style={{ marginLeft: "8px" }}></i>
+                Enviar Mensagem <i className="fa-solid fa-paper-plane"></i>
               </button>
             </form>
           </div>

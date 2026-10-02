@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Logo from "./Logo";
 
 export default function Header() {
   const pathname = usePathname();
@@ -79,45 +79,13 @@ export default function Header() {
       />
 
       <header className="header-wrapper">
-        {/* Aurora glow sutil no canto esquerdo */}
+        {/* Brilho suave no canto esquerdo */}
         <div className={`header-aurora ${showFloating ? "hidden-aurora" : ""}`} />
 
         <div className={`header-inner ${showFloating ? "floating" : ""}`}>
           {/* Logo */}
-          <Link
-            href="/"
-            className="logo"
-            onClick={closeMenu}
-            style={{ textDecoration: "none" }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-              <div
-                style={{
-                  position: "relative",
-                  width: "46px",
-                  height: "46px",
-                  flexShrink: 0,
-                }}
-              >
-                <Image
-                  src="/images/logo/logo_white_transparent.png"
-                  alt="Devora Icon"
-                  fill
-                  style={{ objectFit: "contain" }}
-                  priority
-                />
-              </div>
-              <span
-                style={{
-                  fontSize: "22px",
-                  fontWeight: "550",
-                  letterSpacing: "1px",
-                  color: "#e2e8f0",
-                }}
-              >
-                Devora
-              </span>
-            </div>
+          <Link href="/" className="logo" onClick={closeMenu} aria-label="Devora - página inicial">
+            <Logo size={42} priority />
           </Link>
 
           {/* Navegação Desktop */}
