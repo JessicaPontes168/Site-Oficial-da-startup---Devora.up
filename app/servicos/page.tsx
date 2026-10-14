@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 type Service = {
   id: string;
@@ -41,6 +42,8 @@ const services: Service[] = [
     id: "saas",
     icon: "fa-cloud",
     title: "SaaS",
+    image: "/images/MgStore1.png",
+    imageAlt: "Seção de assistência técnica do site da Mega Store, com troca de bateria, troca de tela e troca de vidro de câmera",
     text: "SaaS é quando a sua ideia vira um produto digital de verdade, que as pessoas acessam pela internet, normalmente por assinatura, como um app ou um sistema online. A gente transforma sua ideia em uma solução pronta para ser usada, pensada para funcionar bem hoje e crescer junto com o seu negócio.",
   },
   {
@@ -53,9 +56,19 @@ const services: Service[] = [
   },
 ];
 
+const solutions = [
+  { icon: "fa-laptop-code", title: "Sites e páginas profissionais", text: "Criamos sites institucionais e páginas para apresentar sua empresa, divulgar serviços e conquistar clientes." },
+  { icon: "fa-layer-group", title: "Sistemas personalizados", text: "Desenvolvemos sistemas para organizar informações, gerenciar atividades e facilitar a rotina da sua empresa." },
+  { icon: "fa-cloud", title: "Plataformas e SaaS", text: "Criamos plataformas digitais e softwares por assinatura, adaptados às necessidades do seu negócio." },
+  { icon: "fa-robot", title: "Automações e inteligência artificial", text: "Automatizamos tarefas e fluxos de trabalho para reduzir atividades manuais e aumentar a produtividade." },
+  { icon: "fa-cart-shopping", title: "Lojas virtuais", text: "Desenvolvemos lojas online para apresentar produtos, receber pedidos e facilitar as vendas pela internet." },
+  { icon: "fa-pen-nib", title: "Design de interfaces", text: "Planejamos interfaces bonitas, intuitivas e fáceis de usar para sites, sistemas e aplicativos." },
+];
+
 export default function Servicos() {
   return (
     <>
+      <WhatsAppButton />
       <PageHero
         title={
           <>
@@ -109,39 +122,19 @@ export default function Servicos() {
         <section className="services section" id="servicos">
           <div className="section-title">
             <span>O que fazemos</span>
-            <h2>Soluções digitais para impulsionar empresas</h2>
+            <h2>Tecnologia para transformar ideias em soluções</h2>
+            <p className="section-subtitle">
+              Desenvolvemos soluções digitais para empresas que querem crescer, inovar e otimizar seus processos.
+            </p>
           </div>
           <div className="services-grid">
-            <div className="service-card">
-              <i className="fa-solid fa-laptop-code"></i>
-              <h3>Sites Profissionais</h3>
-              <p>Landing pages, sites institucionais e sistemas web modernos, rápidos e otimizados.</p>
-            </div>
-            <div className="service-card">
-              <i className="fa-solid fa-layer-group"></i>
-              <h3>Sistemas Sob Medida</h3>
-              <p>Projetos e plataformas personalizados exatamente conforme a necessidade e regra do seu negócio.</p>
-            </div>
-            <div className="service-card">
-              <i className="fa-solid fa-rocket"></i>
-              <h3>Alta Performance</h3>
-              <p>Foco total em desempenho, SEO e acessibilidade para que seu site ranqueie bem no Google.</p>
-            </div>
-            <div className="service-card">
-              <i className="fa-solid fa-mobile-screen"></i>
-              <h3>Design Responsivo</h3>
-              <p>Experiência fluida e adaptável perfeitamente para celulares, tablets e computadores.</p>
-            </div>
-            <div className="service-card">
-              <i className="fa-solid fa-cart-shopping"></i>
-              <h3>E-commerce</h3>
-              <p>Lojas virtuais seguras, integradas com métodos de pagamento e fáceis de gerenciar.</p>
-            </div>
-            <div className="service-card">
-              <i className="fa-solid fa-pen-nib"></i>
-              <h3>UI/UX Design</h3>
-              <p>Interfaces bonitas, modernas e intuitivas pensadas 100% na experiência do usuário.</p>
-            </div>
+            {solutions.map((item) => (
+              <div className="service-card" key={item.title}>
+                <i className={`fa-solid ${item.icon}`} aria-hidden="true"></i>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
           </div>
         </section>
       </div>

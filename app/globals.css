@@ -929,6 +929,14 @@ img {
     color: rgba(247, 249, 248, 0.78);
 }
 
+.footer-email a {
+    color: inherit;
+}
+
+.footer-email a:hover {
+    text-decoration: underline;
+}
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -1739,7 +1747,9 @@ img {
     .manifesto-text span {
         transition: none;
     }
-}/* ===== Aparecer ao rolar ===== */
+}
+
+/* ===== Aparecer ao rolar ===== */
 .reveal {
     opacity: 0;
     transform: translateY(28px);
@@ -1794,7 +1804,9 @@ img {
         transform: none;
         transition: none;
     }
-}/* ===== Animações contínuas ===== */
+}
+
+/* ===== Animações contínuas ===== */
 @keyframes cta-pulso {
     0% {
         box-shadow: 0 0 0 0 rgba(110, 200, 232, 0.55);
@@ -1843,4 +1855,57 @@ img {
     .manifesto-caret.on {
         animation: none;
     }
+}
+
+.section-subtitle {
+    max-width: 38rem;
+    margin: 18px auto 0;
+    color: var(--ink-soft);
+}
+
+/* ===== Botão flutuante do WhatsApp ===== */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 90;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    font-size: 2rem;
+    box-shadow: 0 8px 24px rgba(32, 39, 43, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(32, 39, 43, 0.3);
+}
+
+.whatsapp-float:focus-visible {
+    outline: 3px solid var(--graphite);
+    outline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+    .whatsapp-float {
+        width: 54px;
+        height: 54px;
+        right: 16px;
+        bottom: 16px;
+        font-size: 1.8rem;
+    }
+}
+
+.footer-email a {
+    color: inherit;
+}
+
+.footer-email a:hover {
+    text-decoration: underline;
 }

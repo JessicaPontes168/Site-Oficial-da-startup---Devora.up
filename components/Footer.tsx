@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import { INSTAGRAM_URL, LINKEDIN_URL, WHATSAPP_URL, EMAIL } from "@/lib/contact";
 
 export default function Footer() {
   return (
@@ -51,22 +52,24 @@ export default function Footer() {
           <h3>Contato</h3>
           <ul className="social-links">
             <li>
-              <a href="#" aria-label="Instagram">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i className="fa-brands fa-instagram"></i>
               </a>
             </li>
             <li>
-              <a href="#" aria-label="LinkedIn">
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
             </li>
             <li>
-              <a href="#" aria-label="WhatsApp">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <i className="fa-brands fa-whatsapp"></i>
               </a>
             </li>
           </ul>
-          <p className="footer-email">contato@devora.com.br</p>
+          <p className="footer-email">
+            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+          </p>
         </div>
       </div>
 

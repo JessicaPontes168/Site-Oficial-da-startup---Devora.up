@@ -5,6 +5,9 @@ import OrganicLines from "@/components/OrganicLines";
 import PresenceStory from "@/components/PresenceStory";
 import "./story-section.css";
 import Faq from "@/components/Faq";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import { WHATSAPP_URL } from "@/lib/contact";
+
 const offerings = [
   {
     slug: "sites",
@@ -59,7 +62,7 @@ const offerings = [
     text: (
       <>
         <strong>Menos trabalho repetitivo</strong>, mais tempo para o que
-        importa.Mensagens, avisos e cobranças feitos automaticamente.
+        importa. Mensagens, avisos e cobranças feitos automaticamente.
       </>
     ),
   },
@@ -102,12 +105,13 @@ const reasons = [
     text: "Quando o projeto vai ao ar, seguimos ao seu lado para ajustes e dúvidas.",
   },
 ];
+
 const projects = [
   {
     name: "TV Russas",
     text: "Portal digital moderno de notícias, com sistema gerenciador de conteúdo para a redação publicar e organizar as matérias.",
     tags: ["Portal de notícias", "Gerenciador de conteúdo"],
-    image: "/images/sitetvrussas.png",
+    image: "/images/tvrussas1.png",
     width: 1254,
     height: 1254,
     photo: true,
@@ -124,9 +128,11 @@ const projects = [
     alt: "Site da Mega Store, loja de celulares e assistência técnica",
   },
 ];
+
 export default function Home() {
   return (
     <>
+      <WhatsAppButton />
       <Hero />
 
       <div className="white-content">
@@ -209,7 +215,9 @@ export default function Home() {
           <OrganicLines className="cta-lines" />
           <h2>Tem uma ideia? Vamos transformar isso em produto.</h2>
           <p> Você sonha, a Devora constrói. Peça seu orçamento e veja sua ideia ganhar vida.</p>
-          <Link href="/contato">Solicitar orçamento</Link>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            Solicitar orçamento
+          </a>
         </section>
       </div>
     </>

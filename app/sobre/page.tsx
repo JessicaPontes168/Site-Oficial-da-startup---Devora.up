@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import OrganicLines from "@/components/OrganicLines";
 import Manifesto from "@/components/Manifesto";
 import Reveal from "@/components/Reveal";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const team = [
   { name: "Tiago Pontes Olegario", src: "/images/tiago.jpg" },
@@ -13,18 +14,18 @@ const team = [
 const points = [
   {
     icon: "fa-code",
-    title: "Tecnologia atual",
-    text: "Ferramentas modernas para o seu produto ser estável e crescer.",
+    title: "Tecnologia moderna",
+    text: "Utilizamos tecnologias atuais para desenvolver soluções seguras, eficientes e preparadas para evoluir junto com o seu negócio.",
   },
   {
     icon: "fa-handshake-angle",
-    title: "Parceria de verdade",
-    text: "O seu crescimento é o nosso crescimento.",
+    title: "Parceria e proximidade",
+    text: "Trabalhamos em conjunto com cada cliente, entendendo suas necessidades e acompanhando cada etapa do projeto.",
   },
   {
     icon: "fa-pen-ruler",
-    title: "Cuidado com o acabamento",
-    text: "Design e usabilidade no mesmo nível do código.",
+    title: "Atenção aos detalhes",
+    text: "Unimos design, facilidade de uso e qualidade técnica para entregar soluções funcionais e bem construídas.",
   },
 ];
 const purpose = [
@@ -62,6 +63,7 @@ const values = [
 export default function Sobre() {
   return (
     <>
+      <WhatsAppButton />
       <PageHero
         title={
           <>
@@ -95,9 +97,11 @@ export default function Sobre() {
                 <h2>Você fala direto com quem constrói.</h2>
               </div>
               <p>
-                A Devora cria sites, sistemas, plataformas, SaaS e automações.
-                Cada projeto é acompanhado de perto, do primeiro contato ao
-                lançamento.
+                A Devora desenvolve sites, sistemas, plataformas digitais,
+                softwares por assinatura (SaaS) e automações. Acompanhamos cada
+                projeto de perto, desde o planejamento inicial até o
+                lançamento, garantindo soluções alinhadas às necessidades de
+                cada cliente.
               </p>
               <ul className="sobre-points">
                 {points.map((point) => (
