@@ -42,7 +42,7 @@ const services: Service[] = [
     id: "saas",
     icon: "fa-cloud",
     title: "SaaS",
-    image: "/images/MgStore1.png",
+    image: "/images/mgStore1.png",
     imageAlt: "Seção de assistência técnica do site da Mega Store, com troca de bateria, troca de tela e troca de vidro de câmera",
     text: "SaaS é quando a sua ideia vira um produto digital de verdade, que as pessoas acessam pela internet, normalmente por assinatura, como um app ou um sistema online. A gente transforma sua ideia em uma solução pronta para ser usada, pensada para funcionar bem hoje e crescer junto com o seu negócio.",
   },
